@@ -33,6 +33,9 @@ public class PrimaryTest extends BaseTest {
         {
             assertThat(model[i].getGlobalId(),notNullValue());
             assertThat(model[i].getNumber(),notNullValue());
+            assertThat(model[i].getCells().get("AdmArea"),not(isEmptyOrNullString()));
+            assertThat(model[i].getCells().get("District"),not(isEmptyOrNullString()));
+            assertThat(model[i].getCells().get("Location"),not(isEmptyOrNullString()));
         }
         assertThat(model[0].getGlobalId(),lessThan(model[1].getGlobalId()));
     }

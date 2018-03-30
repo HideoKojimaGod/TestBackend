@@ -1,9 +1,7 @@
 package api.mal.models;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-@JsonIgnoreProperties({"Cells"})
 public class DatasetDescriptionModel {
     @JsonProperty(value = "Caption")
     private String caption;
@@ -28,7 +26,7 @@ public class DatasetDescriptionModel {
 
     @Override
     public String toString() {
-        return "DatasetModel{" +
+        return "DatasetDescriptionModel{" +
                 "caption=" + caption +
                 ", description='" + description + '\'' +
                 '}';
